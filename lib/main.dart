@@ -5,7 +5,7 @@ import 'package:multi_choice/my_card.dart';
 import 'my_dicee.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: MainPage(),
@@ -57,7 +57,7 @@ class MainPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => MyCard())
+                        context, MaterialPageRoute(builder: (context) => const MyCard())
                       );
                     },
                     child: const Text('CARD'),
@@ -92,10 +92,10 @@ class MainPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Dicee())
+                        MaterialPageRoute(builder: (context) => const Dicee())
                       );
                     },
-                    child: Text('DICEE'),
+                    child: const Text('DICEE'),
                   )
                 ],
               ),
@@ -127,10 +127,10 @@ class MainPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AskMe())
+                        MaterialPageRoute(builder: (context) => const AskMe())
                       );
                     },
-                    child: Text('ASKME'),
+                    child: const Text('ASKME'),
                   )
                 ],
               ),
