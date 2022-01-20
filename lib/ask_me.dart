@@ -21,7 +21,7 @@ class _AskMeState extends State<AskMe> {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        title: Text('ASK ME ANYTHING'),
+        title: const Text('ASK ME ANYTHING'),
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),

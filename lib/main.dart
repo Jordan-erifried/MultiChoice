@@ -60,7 +60,7 @@ class MainPage extends StatelessWidget {
                         context, MaterialPageRoute(builder: (context) => MyCard())
                       );
                     },
-                    child: Text('CARD'),
+                    child: const Text('CARD'),
                   )
                 ],
               ),

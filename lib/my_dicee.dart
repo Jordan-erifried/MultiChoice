@@ -2,7 +2,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 
-
 class Dicee extends StatefulWidget {
   const Dicee({Key? key}) : super(key: key);
 
@@ -16,15 +15,15 @@ class _DiceeState extends State<Dicee> {
 
   void left() {
     setState(() {
-      leftDiceNumber = Random().nextInt(6) +1;
-      rightDiceNumber = Random().nextInt(6) + 1;
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) +1;
     });
   }
 
   void right() {
     setState(() {
-      rightDiceNumber = Random().nextInt(6) + 1;
-      leftDiceNumber = Random().nextInt(6) +1;
+      rightDiceNumber = Random().nextInt(6) +1;
+      leftDiceNumber = Random().nextInt(6) + 1;
     });
   }
   @override
@@ -32,31 +31,30 @@ class _DiceeState extends State<Dicee> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text('RANDOM DICEE NUMBER'),
+        title: const Text('Dicee App'),
         centerTitle: true,
       ),
       backgroundColor: Colors.red,
       body: Center(
         child: Row(
           children: <Widget>[
-
             Expanded(
-             child: FlatButton(
-               onPressed: () {
-                 left();
-               },
-               child: Image.asset('images/dice$leftDiceNumber.png'),
-             ),
+              child: FlatButton(
+                  child: Image.asset('images/dice$leftDiceNumber.png'),
+                  onPressed: () {
+                    left();
+                  },
+              ),
             ),
 
             Expanded(
               child: FlatButton(
-                onPressed: () {
-                  right();
-                },
-                child: Image.asset('images/dice$rightDiceNumber.png'),
+                  child: Image.asset('images/dice$rightDiceNumber.png'),
+                  onPressed: () {
+                    right();
+                  },
               ),
-            )
+            ),
           ],
         ),
       ),
