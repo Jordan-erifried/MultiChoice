@@ -92,7 +92,7 @@ class MainPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Dicee())
+                        MaterialPageRoute(builder: (context) => const MyDicee())
                       );
                     },
                     child: const Text('DICEE'),
