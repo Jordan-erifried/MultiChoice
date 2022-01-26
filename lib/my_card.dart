@@ -12,12 +12,12 @@ class MyCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+           const  CircleAvatar(
               backgroundImage: AssetImage('images/erd.JPG'),
               radius: 50.0,
             ),
 
-            Text(
+            const Text(
               'Jordan Erifried',
               style: TextStyle(
                 fontSize: 25.0,
@@ -45,9 +45,9 @@ class MyCard extends StatelessWidget {
                 ),
               ),
             Card(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.phone,
                   color: Colors.teal,
                 ),
@@ -62,9 +62,9 @@ class MyCard extends StatelessWidget {
               )
             ),
             Card(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.mail,
                   color: Colors.teal,
                 ),
@@ -84,11 +84,11 @@ class MyCard extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MyApp(),
+                    builder: (context) => const MyApp(),
                   )
                 );
               },
-              child: Text('HomePage'),
+              child: const Text('HomePage'),
             ),
           ],
         ),
