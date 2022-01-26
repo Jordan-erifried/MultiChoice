@@ -36,24 +36,35 @@ class _MyDiceeState extends State<MyDicee> {
             Row(
               children: [
                 Expanded(
-                  child: FlatButton(
-                      onPressed: () {
-                        left();
-                      },
-                      child: Image.asset('images/dice$leftDiceNumber.png')
-                  ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('images/dice$leftDiceNumber.png'),
+                      )
                 ),
 
                 Expanded(
-                  child: FlatButton(
-                      onPressed: () {
-                        right();
-                      },
-                      child: Image.asset('images/dice$rightDiceNumber.png')
-                  ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('images/dice$rightDiceNumber.png'),
+                      )
                 )
               ],
-            )
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                left();
+                right();
+              },
+              child: Text('RUN PROGRAM'),
+             style: ElevatedButton.styleFrom(
+               primary: Colors.red.shade900,
+               elevation: 20.0,
+             ),
+            ),
           ],
         ),
       ),
