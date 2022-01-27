@@ -29,6 +29,11 @@ class _MyDiceeState extends State<MyDicee> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Text('Dicee'),
+          centerTitle: true,
+        ),
         backgroundColor: Colors.red,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,

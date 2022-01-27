@@ -30,115 +30,72 @@ class MainPage extends StatelessWidget {
     return SafeArea(
       child: Center(
         child: Column(
-         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: Stack(
-                children: <Widget>[
-                  Positioned.fill(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: <Color>[
-                            Color(0xFF0D47A1),
-                            Color(0xFF1976D2),
-                            Color(0xFF42A5F5),
-                          ]
-                        )
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(6.0),
-                      primary: Colors.white,
-                      textStyle: const TextStyle(fontSize: 20),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => const MyCard())
-                      );
-                    },
-                    child: const Text('CARD'),
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(
+              onPressed:() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyCard(),
                   )
-                ],
+                );
+              },
+              child: const Text(
+                  'MY CARD',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 20.0,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.teal,
               ),
             ),
 
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: Stack(
-                children: <Widget>[
-                  Positioned.fill(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: <Color>[
-                                Color(0xFF0D47A1),
-                                Color(0xFF1976D2),
-                                Color(0xFF42A5F5),
-                              ]
-                          )
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(6.0),
-                      primary: Colors.white,
-                      textStyle: const TextStyle(fontSize: 20),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MyDicee())
-                      );
-                    },
-                    child: const Text('DICEE'),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyDicee(),
                   )
-                ],
+                );
+              },
+              child:  const Text(
+                  'MY DICEE',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                  fontSize: 20.0,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
               ),
             ),
 
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: Stack(
-                children: <Widget>[
-                  Positioned.fill(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: <Color>[
-                                Color(0xFF0D47A1),
-                                Color(0xFF1976D2),
-                                Color(0xFF42A5F5),
-                              ]
-                          )
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(6.0),
-                      primary: Colors.white,
-                      textStyle: const TextStyle(fontSize: 20),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const AskMe())
-                      );
-                    },
-                    child: const Text('ASKME'),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AskMe(),
                   )
-                ],
+                );
+              },
+              child: const Text(
+                  'ASK MEE',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                  fontSize: 20.0,
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
 
