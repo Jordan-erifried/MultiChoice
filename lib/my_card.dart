@@ -11,69 +11,71 @@ class MyCard extends StatelessWidget {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           const  CircleAvatar(
+          children: <Widget>[
+            const CircleAvatar(
               backgroundImage: AssetImage('images/erd.JPG'),
               radius: 50.0,
             ),
-
             const Text(
-              'Jordan Erifried',
+                'Jodan Erifried',
               style: TextStyle(
-                fontSize: 25.0,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Pacifico',
                 color: Colors.white,
+                fontSize: 20.0,
+                fontFamily: 'Pacifico',
               ),
             ),
 
             Text(
-              'FLUTTER DEVELOPPER',
+                'FLUTTER DEVELOPPER',
               style: TextStyle(
                 color: Colors.teal.shade100,
+                fontSize: 15.0,
                 fontFamily: 'Source Sans Pro',
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
-                fontSize: 15.0,
               ),
             ),
-              SizedBox(
-                height: 15.0,
-                width: 150.0,
-                child: Divider(
-                  color: Colors.teal.shade100,
-                ),
+
+            SizedBox(
+              height: 15.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal.shade100,
               ),
+            ),
+
             Card(
-              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
                 leading: const Icon(
                   Icons.phone,
                   color: Colors.teal,
                 ),
                 title: Text(
-                    '+225 07 893 123 57',
+                  '+225 07 893 123 57',
                   style: TextStyle(
-                    fontFamily: 'Source Sans Pro',
                     color: Colors.teal.shade900,
                     fontSize: 20.0,
+                    fontFamily: 'Source Sans Pro',
                   ),
                 ),
-              )
+              ),
             ),
+
             Card(
-              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
                 leading: const Icon(
                   Icons.mail,
                   color: Colors.teal,
                 ),
                 title: Text(
-                    'danerifried@gmail.com',
+                  'danerifried@gmail.com',
                   style: TextStyle(
-                    fontFamily: 'Source Sans Pro',
                     color: Colors.teal.shade900,
                     fontSize: 20.0,
+                    fontFamily: 'Source Sans Pro',
                   ),
                 ),
               ),
@@ -88,8 +90,16 @@ class MyCard extends StatelessWidget {
                   )
                 );
               },
-              child: const Text('HomePage'),
-            ),
+              child: const Text(
+                'GoToHome',
+                style: TextStyle(
+                  fontFamily:'Source Sans Pro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+
           ],
         ),
       ),
