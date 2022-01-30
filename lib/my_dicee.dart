@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyDicee extends StatefulWidget {
@@ -27,49 +28,66 @@ class _MyDiceeState extends State<MyDicee> {
   }
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text('Dicee'),
-          centerTitle: true,
-        ),
+    return Scaffold(
+      backgroundColor: Colors.red,
+      appBar: AppBar(
         backgroundColor: Colors.red,
-        body: Column(
+        title: const Text(
+          'THE DICEE',
+          style: TextStyle(
+            fontFamily: 'Source Sans Pro',
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.5,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Row(
-              children: [
+              children: <Widget>[
                 Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('images/dice$leftDiceNumber.png'),
-                      )
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('images/dice$leftDiceNumber.png'),
+                  ),
                 ),
 
                 Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('images/dice$rightDiceNumber.png'),
-                      )
-                )
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('images/dice$rightDiceNumber.png'),
+                  ),
+                ),
               ],
             ),
-            SizedBox(
-              height: 20.0,
-            ),
 
+              const SizedBox(
+                height: 20.0,
+              ),
             ElevatedButton(
-              onPressed: () {
-                left();
-                right();
-              },
-              child: Text('RUN PROGRAM'),
-             style: ElevatedButton.styleFrom(
-               primary: Colors.red.shade900,
-               elevation: 20.0,
-             ),
-            ),
+                onPressed: () {
+                  left();
+                  right();
+                },
+
+                child: const Text(
+                  'RUN PROGRAM',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red.shade800,
+                elevation: 5.0,
+              ),
+            )
           ],
         ),
       ),
