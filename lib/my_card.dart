@@ -86,7 +86,7 @@ class MyCard extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MyApp(),
+                    builder: (context) =>  MyApp(),
                   )
                 );
               },
