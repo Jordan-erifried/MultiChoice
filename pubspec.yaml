@@ -18,6 +18,7 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  full_screen_menu: ^1.0.0
 
 dev_dependencies:
   flutter_test:
