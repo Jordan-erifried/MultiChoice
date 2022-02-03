@@ -19,6 +19,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   full_screen_menu: ^1.0.0
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:
@@ -41,4 +42,3 @@ flutter:
 
   assets:
     - images/
-    - assets/
