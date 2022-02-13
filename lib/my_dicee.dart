@@ -33,47 +33,7 @@ class _MyDiceeState extends State<MyDicee> {
       });
     }
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.red,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset('images/dice$leftDiceNumber.png'),
-                  ),
-                ),
-
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset('images/dice$rightDiceNumber.png'),
-                  ),
-                ),
-              ],
-            ),
-
-            SizedBox(
-              height: 30.0,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                leftNumb();
-                rightNumb();
-              },
-              child: Text(
-                'RUN PROGRAM',
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.red.shade500,
-              ),
-            )
-          ],
-        ),
-      ),
+      child:
     );
   }
 }
