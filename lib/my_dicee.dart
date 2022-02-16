@@ -62,7 +62,7 @@ class _MyDiceeState extends State<MyDicee> {
               ],
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
 
