@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyDicee extends StatefulWidget {
@@ -7,6 +9,20 @@ class MyDicee extends StatefulWidget {
 }
 
 class _MyDiceeState extends State<MyDicee> {
+  int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
+
+  void leftCube() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+
+  void rightCube() {
+    rightDiceNumber = Random().nextInt(6) + 1;
+    leftDiceNumber = Random().nextInt(6) + 1;
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,20 +47,16 @@ class _MyDiceeState extends State<MyDicee> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-
-                    },
-                    child: Image.asset('images/dice1.png'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('images/dice$leftDiceNumber.png'),
                   ),
                 ),
 
                 Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-
-                    },
-                    child: Image.asset('images/dice1.png'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('images/dice$rightDiceNumber.png'),
                   ),
                 ),
               ],
@@ -59,7 +71,8 @@ class _MyDiceeState extends State<MyDicee> {
                 primary: Colors.red.shade500,
               ),
               onPressed: () {
-
+                leftCube();
+                rightCube();
               },
               child: Text('RUN PROGRAM'),
             )
